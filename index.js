@@ -8,19 +8,28 @@ const fetchData = position => {
 }
 
 const setWeatherData = data => {
-    console.log(data);
     const weatherData = {
-        location: `${data.name}, ${data.sys.country}`,
-        description: data.weather[0].description,
-        humidity: data.main.humidity,
-        pressure: data.main.pressure,
-        temperature: data.main.temp,
-        date: getDate(),
+        location: `City: ${data.name}, ${data.sys.country}`,
+        description: `Description: ${data.weather[0].description}`,
+        humidity: `Humidity: ${data.main.humidity}`,
+        pressure: `Pressure: ${data.main.pressure}`,
+        temperature: `Temperature: ${data.main.temp}C°`,
+        date: `Date: ${getDate()}`,
     }
 
     Object.keys(weatherData).forEach(key => {
         document.querySelector('.'+key).textContent = weatherData[key];
     });
+
+    loadEnd();
+}
+
+const loadEnd = () => {
+    let row = document.querySelector('.row');
+    let spinner = document.querySelector('.lds-ripple');
+
+    spinner.style.display = 'none';
+    row.style.display = 'flex';
 }
 
 const getDate = () => {
