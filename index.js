@@ -1,7 +1,8 @@
 const API_KEY = '0a63fec2a95cb779a896aee942f04b50';
 
-const fetchData = position => {
+const fetchData = async position => {
     const { latitude, longitude } = position.coords;
+    await sleep(3000);
     fetch(`https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${latitude}&lon=${longitude}&appid=${API_KEY}`)
         .then(response => response.json())
         .then(data => setWeatherData(data))
@@ -40,3 +41,5 @@ const getDate = () => {
 const onLoad = () => {
     navigator.geolocation.getCurrentPosition(fetchData)
 }
+
+function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms));}

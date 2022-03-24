@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Quicksand:wght@300;500;700&family=Roboto+Condensed:ital,wght@1,300&family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Quicksand:wght@300;500;700&family=Roboto+Condensed:ital,wght@1,300&family=Zen+Kaku+Gothic+Antique&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script type="text/javascript" src="index.js"></script>
     <title>ClimaApi</title>
 </head>
+
 <body onload="onLoad()">
     <div class="container">
         <div class="row">
             <div class="col">
-                <div class="location"></div>
-                <div class="temperature"></div>
-                <div class="date"></div>
-                <div class="humidity"></div>
-                <div class="description"></div>
-                <div class="pressure"></div>
+                <div class="locationInf">
+                    <div class="location"></div>
+                    <div class="date"></div>
+                    <div class="description"></div>
+                </div>
+                <div class="tempInf">
+                    <div class="temperature"></div>
+                    <div class="humidity"></div>
+                    <div class="pressure"></div>
+                </div>
             </div>
         </div>
-        <div class="lds-ripple"><div></div><div></div></div>
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
+        </div>
     </div>
 </body>
+
 </html>

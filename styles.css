@@ -28,6 +28,19 @@
   display: none;
 }
 
+.locationInf{
+  background-color: white;
+  padding: 8px;
+  margin: 8px;
+  color: black;
+  border-radius: 15px;
+}
+
+.tempInf{
+  padding: 8px;
+  margin: 8px;
+}
+
 .lds-ripple {
   display: inline-block;
   position: relative;
